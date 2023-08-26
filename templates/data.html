@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data</title>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		th, td {
+			border: 1px solid black;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Datos de Vacunacion en Panamä</h1>
+	<table>
+		<tr>
+			<th>Pais</th>
+			<th>Item</th>
+			<th>Año</th>
+			<th>Valor en %</th>
+		</tr>
+		{% for record in data %}
+		<tr>
+			<td>{{ record.Country_or_Area }}</td>
+			<td>{{ record.Item }}</td>
+			<td>{{ record.Year }}</td>
+			<td>{{ record.Value }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
